@@ -38,16 +38,16 @@ convert data/ship.png -size 48x48 ship-48x48.png
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std datadir=%{_gamesdatadir}/%{name}
 
-install -d $RPM_BUILD_ROOT%{_menudir}
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 
-cat >$RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-	command="%{_gamesbindir}/%{name}" \
-	icon="arcade_section.png" \
-	needs="X11" \
-	section="More Applications/Games/Arcade" \
-	title="SpacePong" \
-	longtitle="%{Summary}" 
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_gamesbindir}/%{name}	
+Icon=arcade_section		
+Categories=Game;ArcadeGame;	
+Name=SpacePong	
+Comment=%{Summary}
 EOF
 
 install -m644 data/ship-small.png -D $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,0755) 
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_gamesdatadir}/%{name}/data
 %{_gamesbindir}/%{name}
 %{_miconsdir}/%{name}.png
