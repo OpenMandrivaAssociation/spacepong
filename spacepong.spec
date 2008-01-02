@@ -14,6 +14,7 @@ Source0:	http://belnet.dl.sourceforge.net/sourceforge/spacepong/%{name}_%{versio
 BuildArch:	noarch
 Requires:	pygame
 BuildRequires:	ImageMagick
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot 
 
 %description
 An innovative game that is controlled with the mouse.
