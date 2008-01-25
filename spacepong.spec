@@ -1,13 +1,13 @@
 %define name	spacepong
 %define version	0.0.2
-%define release	1
+%define release	2
 %define	Summary	An innovative pong like game
 
 Summary:	%{Summary}
 Name:		%{name}
 Version:	%{version} 
 Release:	%mkrel %{release}
-License:	GPL
+License:	GPLv2+
 Group:		Games/Arcade
 URL:		http://spacepong.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/spacepong/%{name}_%{version}-1.tar.bz2
@@ -44,10 +44,10 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
 Type=Application
-Exec=%{_gamesbindir}/%{name}	
-Icon=arcade_section		
-Categories=Game;ArcadeGame;	
-Name=SpacePong	
+Exec=%{_gamesbindir}/%{name}
+Icon=arcade_section
+Categories=Game;ArcadeGame;
+Name=SpacePong
 Comment=%{Summary}
 EOF
 
@@ -72,4 +72,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-
