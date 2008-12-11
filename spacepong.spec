@@ -13,7 +13,7 @@ URL:		http://spacepong.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/spacepong/%{name}_%{version}-1.tar.bz2
 BuildArch:	noarch
 Requires:	pygame
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot 
 
 %description
