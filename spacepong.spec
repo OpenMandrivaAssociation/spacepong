@@ -1,6 +1,6 @@
 %define name	spacepong
 %define version	0.0.2
-%define release	2
+%define release	3
 %define	Summary	An innovative pong like game
 
 Summary:	%{Summary}
