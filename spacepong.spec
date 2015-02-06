@@ -1,7 +1,7 @@
 Summary:	An innovative pong like game
 Name:		spacepong
 Version:	0.0.2
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Games/Arcade
 URL:		http://spacepong.sourceforge.net/
