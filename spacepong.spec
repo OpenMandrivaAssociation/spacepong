@@ -4,7 +4,7 @@ Version:	0.0.2
 Release:	5
 License:	GPLv2+
 Group:		Games/Arcade
-URL:		http://spacepong.sourceforge.net/
+URL:		https://spacepong.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/spacepong/%{name}_%{version}-1.tar.bz2
 BuildArch:	noarch
 Requires:	pygame
